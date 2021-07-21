@@ -1,23 +1,13 @@
-# The Flaky Test Challenge
+# The Flaky Test Challenge Solution
 
-As an engineer, you will be expected to ensure that all new features and fixes do not cause regressions or headaches for active users. Tests are an important tool for keeping our apps usable and bug-free. However, tests are only useful if they are reliable. This challenge will test your ability to understand and fix a flaky test of a React app.
+*Out of the 3 main types of flaky tests that may occur during TDD with cypress, this test had a DOM-related flake which led to inconsistency of how elements were rendered in the DOM. Due to chaining, only the last query (.should('contains','...')) was being retried before timeout hence not finding the 'li' selector from get as it was only executed once. Using contains query with a selector and text content solves the problem as both are queried for before timeout.*
 
-## The Challenge
+*In addition the number of retries for the test is increased so that there are two attempts if the first fails*
 
-The test for this app sometimes passes and sometimes fails. You should be able to quickly figure out a change that will make the test 100% reliable.
+## Author
 
-You may modify any file or files *except* those in the `src/` directory.
+👤 **Elbie Moonga**
 
-## Instructions
-
-_You must follow these steps for your solution to be accepted_
-
-**Forking this repo is an immediate disqualification**
-
-How to attempt this challenge:
-
-1) Clone this challenge repo
-2) Solve the challenge locally
-3) Create a new repo in your GitHub account and note the git url
-4) Set your new repo as the origin for your local solution: `git remote set-url origin ${your repo url}`
-5) Push the solution to your repo
+- GitHub: [@Elbie-Em](https://github.com/Elbie-em)
+- Twitter: [ElbieEm](https://twitter.com/ElbieEm)
+- LinkedIn: [elbie-moonga](https://www.linkedin.com/in/elbiemoonga/) 
