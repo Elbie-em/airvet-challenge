@@ -1,6 +1,11 @@
+/// <reference types="cypress" />
+
 describe('Sign Up', () => {
-  it('Adds person to course', () => {
+  beforeEach(() => {
     cy.visit('/')
+  })
+
+  it('Adds person to course', () => {
 
     cy.get('input[name="name"]')
       .click()
@@ -22,7 +27,6 @@ describe('Sign Up', () => {
     cy.get('input[type="submit"]')
       .click()
 
-    cy.get('li')
-      .should('contain', 'Some Name - some@email.com - core - git-it')
+    cy.contains('li','Some Name - some@email.com - core - git-it')
   })
 })
